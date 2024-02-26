@@ -35,14 +35,19 @@ public class ListaTareas {
 
     public void mostrarTareas() {
 
+        StringBuilder mensaje = new StringBuilder();
+
         System.out.println("\nTareas\n");
 
         for (Tarea tarea : tareas) {
 
-            System.out.printf("\nNombre de la tarea: %s\n", tarea.getNombreTarea());
-            System.out.printf("Completada?  %b\n", tarea.isCompletada());
+            mensaje.append("Nombre de la tarea: ").append(tarea.getNombreTarea()).append("\nCompletada?  ").append(tarea.isCompletada()).append("\n\n");
 
+//            System.out.printf("\nNombre de la tarea: %s\n", tarea.getNombreTarea());
+//            System.out.printf("Completada?  %b\n", tarea.isCompletada());
         }
+
+        JOptionPane.showMessageDialog(null, mensaje.toString(), "Tareas", JOptionPane.INFORMATION_MESSAGE);
 
         System.out.println();
 
