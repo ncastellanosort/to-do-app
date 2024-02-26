@@ -6,6 +6,7 @@ package logica;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,8 +25,12 @@ public class ListaTareas {
 
     public void agregarTarea() {
 
-        System.out.println("\nNombre de la tarea: ");
-        String nombre = in.nextLine();
+//        System.out.println("\nNombre de la tarea: ");
+        
+        
+//        String nombre = in.nextLine();
+        
+        String nombre = JOptionPane.showInputDialog(null, "Nombre de la tarea: ");
 
 
 
@@ -70,7 +75,10 @@ public class ListaTareas {
     
         System.out.println("\nSeleccione el indice de la tarea ya realizada: ");
         
-        int ind = in.nextInt();
+        
+//        int ind = in.nextInt();
+        
+        int ind = Integer.parseInt(JOptionPane.showInputDialog(null, "Seleccione el indice de la tarea ya realizada: "));
         
         Tarea tareaRealizada = tareas.get(ind);
         
