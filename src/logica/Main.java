@@ -4,6 +4,7 @@
  */
 package logica;
 
+import ui.Menu;
 
 /**
  *
@@ -16,10 +17,15 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        Procedimientos software = new Procedimientos();
-        
-        software.Menu();
-        
+//        Procedimientos software = new Procedimientos();
+//
+//        software.Menu();
+
+        Menu frame = new Menu();
+
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
+        frame.setVisible(true);
 
     }
 
